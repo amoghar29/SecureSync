@@ -24,8 +24,8 @@ coverage
 # Build Outputs
 .next/
 out/
-build
-dist
+# REMOVE THIS LINE: build
+# REMOVE THIS LINE: dist
 
 
 # Debug
