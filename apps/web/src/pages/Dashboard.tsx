@@ -4,8 +4,13 @@ import axios from "axios";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
+interface TOTPCode {
+  serviceName: string;
+  token: string;
+}
+
 export default function Dashboard() {
-  const [codes, setCodes] = useState([]);
+  const [codes, setCodes] = useState<TOTPCode[]>([]);
   const [loading, setLoading] = useState(true);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [newSecret, setNewSecret] = useState({

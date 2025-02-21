@@ -1,5 +1,11 @@
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+
+interface FaqProps {
+  question: string;
+  answer: string;
+}
+
 const faqs = [
   {
     question: "How secure is SecureSync?",
@@ -25,7 +31,7 @@ const faqs = [
   },
 ];
 
-const FaqItem = ({ question, answer }) => {
+const FaqItem: React.FC<FaqProps> = ({ question, answer }) => {
     const [isOpen, setIsOpen] = useState(false);
     
     return (

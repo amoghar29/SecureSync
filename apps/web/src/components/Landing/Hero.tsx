@@ -1,8 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import { Lock, Mail,  } from "lucide-react";
 
 export default function Hero() {
-  const navigate = useNavigate();
 
   return (
     <section className="bg-black pb-8 pt-48">
