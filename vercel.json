@@ -1,0 +1,12 @@
+{
+    "projects": [
+      {
+        "name": "secureSync-web",
+        "root": "app/web",
+        "buildCommand": "pnpm run build",
+        "outputDirectory": "dist",
+        "installCommand": "pnpm install"
+      }
+    ]
+  }
+  
