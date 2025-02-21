@@ -24,7 +24,7 @@ export const addSecret = async (
   const userId = (req as any).userId;
 
   try {
-    const secret = value.secretKey ;
+    const secret = value.secretKey.split(" ").join("");
 
     // Validate the secret is base32 encoded
     try {
