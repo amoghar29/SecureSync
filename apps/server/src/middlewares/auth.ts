@@ -3,13 +3,14 @@ import * as jwt from "jsonwebtoken";
 
 export interface AuthRequest extends Request {
   userId?: string;
+  cookies: { [key: string]: string };
 }
 
 export const authMiddleware = (
   req: AuthRequest,
   res: Response,
   next: NextFunction
-) : any => {
+): any => {
   const token = req.cookies.token;
 
   if (!token || token === undefined) {

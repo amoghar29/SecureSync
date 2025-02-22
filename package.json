@@ -2,7 +2,7 @@
   "name": "securesync",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "tsc -b apps/server/tsconfig.json packages/ui/tsconfig.json",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -11,7 +11,9 @@
   "devDependencies": {
     "prettier": "^3.5.0",
     "turbo": "^2.4.2",
-    "typescript": "5.7.3"
+    "typescript": "5.7.3",
+    "prisma": "^6.4.0",
+    "@prisma/client": "^6.4.0"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {

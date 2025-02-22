@@ -1,20 +1,19 @@
 import express from "express";
-import * as cors from "cors";
-import * as dotenv from "dotenv";
+import cors from "cors"; // Corrected import
+import dotenv from "dotenv";
 import routes from "./routes/index.js";
-import * as cookieParser from "cookie-parser";
-import * as path from "path";
+import cookieParser from "cookie-parser"; // Corrected import
+import path from "path";
 
 const FRONTEND_URL = process.env.FRONTEND_URL;
 dotenv.config();
 
 const app = express();
 
-app.use(cors());
-
+app.use(cors()); // Corrected usage
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.use(cookieParser()); // Corrected usage
 
 // Routes
 app.use("/api", routes);
