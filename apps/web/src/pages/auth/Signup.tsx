@@ -5,7 +5,6 @@ import axios from "axios";
 import { useAuth } from "../../context/AuthContext";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-console.log(BACKEND_URL);
 
 export default function SignUp() {
   const [name, setName] = useState("");

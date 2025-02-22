@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
 import { AuthProvider } from "../context/AuthContext";
 import ProtectedRoute from "../pages/auth/ProtectedRoute";
@@ -15,12 +14,11 @@ import Landing from "../pages/Landing";
 import NotFound from "../components/NotFound";
 
 function AppContent() {
-  const location = useLocation();
 
   return (
     <>
       <Navbar />
-      <Routes location={location} key={location.pathname}>
+      <Routes >
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route
@@ -39,7 +37,7 @@ function AppContent() {
             </div>
           }
         />
-              <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
       <Footer />
