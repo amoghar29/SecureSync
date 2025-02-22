@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import { AuthProvider } from "../context/AuthContext";
+import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "../pages/auth/ProtectedRoute";
 import Navbar from "../components/Landing/Navbar";
 import Footer from "../components/Landing/Footer";
@@ -14,11 +9,10 @@ import Landing from "../pages/Landing";
 import NotFound from "../components/NotFound";
 
 function AppContent() {
-
   return (
     <>
       <Navbar />
-      <Routes >
+      <Routes>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route
@@ -33,27 +27,15 @@ function AppContent() {
           path="/"
           element={
             <div className="min-h-screen bg-black text-white">
-              <Landing/>
+              <Landing />
             </div>
           }
         />
         <Route path="*" element={<NotFound />} />
-
       </Routes>
       <Footer />
-
     </>
   );
 }
 
-function AppRouter() {
-  return (
-    <AuthProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </AuthProvider>
-  );
-}
-
-export default AppRouter;
+export default AppContent;
