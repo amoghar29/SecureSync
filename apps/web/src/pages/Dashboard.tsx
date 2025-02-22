@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Plus, X, RefreshCw } from "lucide-react";
 import axios from "axios";
-
+import "../App.css"
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 interface TOTPCode {
@@ -53,7 +53,7 @@ export default function Dashboard() {
   useEffect(() => {
     fetchCodes();
     // Fetch new codes every 30 seconds
-    const interval = setInterval(fetchCodes, 30000);
+    const interval = setInterval(fetchCodes, 20000);
     return () => clearInterval(interval);
   }, []);
 
@@ -97,7 +97,7 @@ export default function Dashboard() {
                 {code.token}
               </div>
               <div className="relative">
-                <RefreshCw className=" w-6 h-6 text-blue-400" />
+                <RefreshCw className="rotate-slow w-6 h-6 text-blue-400 animate-spin-slow" />
               </div>
             </div>
           </div>

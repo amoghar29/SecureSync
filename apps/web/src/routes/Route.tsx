@@ -10,7 +10,7 @@ import NotFound from "../components/NotFound";
 
 function AppContent() {
   return (
-    <>
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
       <Routes>
         <Route path="/signin" element={<SignIn />} />
@@ -23,18 +23,11 @@ function AppContent() {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/"
-          element={
-            <div className="min-h-screen bg-black text-white">
-              <Landing />
-            </div>
-          }
-        />
+        <Route path="/" element={<Landing />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
