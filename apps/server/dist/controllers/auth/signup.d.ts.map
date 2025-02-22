@@ -1,1 +1,0 @@
-{"version":3,"file":"signup.d.ts","sourceRoot":"","sources":["../../../src/controllers/auth/signup.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AAC5C,OAAO,EAAE,aAAa,EAAE,YAAY,EAAE,MAAM,wBAAwB,CAAC;AASrE,eAAO,MAAM,MAAM,QACZ,OAAO,CAAC,aAAa,CAAC,OACtB,QAAQ,CAAC,YAAY,CAAC,KAC1B,OAAO,CAAC,IAAI,CAoEd,CAAC"}
