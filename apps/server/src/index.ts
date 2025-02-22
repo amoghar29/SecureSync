@@ -1,9 +1,9 @@
 import express from "express";
-import cors from "cors";
-import dotenv from "dotenv";
+import * as cors from "cors";
+import * as dotenv from "dotenv";
 import routes from "./routes/index.js";
-import cookieParser from "cookie-parser";
-import path from "path";
+import * as cookieParser from "cookie-parser";
+import * as path from "path";
 
 const FRONTEND_URL = process.env.FRONTEND_URL;
 dotenv.config();
