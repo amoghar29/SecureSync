@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const index_js_1 = __importDefault(require("./routes/index.js"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const path_1 = __importDefault(require("path"));
 const FRONTEND_URL = process.env.FRONTEND_URL;
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -23,5 +24,12 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, cookie_parser_1.default)());
 // Routes
 app.use("/api", index_js_1.default);
+// Serve static files from the React app
+app.use(express_1.default.static(path_1.default.join(__dirname, "client/build")));
+// The "catchall" handler: for any request that doesn't
+// match one above, send back index.html.
+app.get("*", (req, res) => {
+    res.sendFile(path_1.default.join(__dirname + "/client/build/index.html"));
+});
 const PORT = process.env.PORT || 3001;
 app.listen(PORT);
