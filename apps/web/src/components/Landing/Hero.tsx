@@ -15,14 +15,7 @@ export default function Hero() {
               A modern, secure alternative to Google Authenticator. Manage your
               two-factor authentication codes with ease and confidence.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                Add New Service
-              </button>
-              <button className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all">
-                View Tutorial
-              </button>
-            </div>
+            
           </div>
 
           <div className="relative">
